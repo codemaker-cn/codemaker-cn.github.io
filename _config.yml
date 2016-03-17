@@ -1,0 +1,40 @@
+#version
+version: "1.0"
+
+permalink: /:year/:month/:day/:title/
+
+# 站点设置
+title: "码农网-CodeMaker"
+email: 286198612@qq.com
+description: "码农网 CodeMaker"
+keywords: "码农网 CodeMaker 代码生成工具 代码分享 Java Bootstrap Jquery HTML5 css3"
+
+# 用户信息设置
+weibo_username: LiuLiang
+github_username: LiuLiang
+
+# Markdown设置
+kramdown:
+  input:  GFM
+  use_coderay: true
+  coderay:
+    coderay_line_numbers:  nil
+
+
+
+# 地址设置
+baseurl: ""
+url: ""
+
+
+# 分页设置
+paginate: 10
+paginate_path: "page/:num"
+
+#scss设置
+sass:
+    sass_dir: /assets/stylesheet
+    style: :compressed
+
+# duoshuo设置
+duoshuo_shortname:
