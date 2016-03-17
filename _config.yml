@@ -37,4 +37,4 @@ sass:
     style: :compressed
 
 # duoshuo设置
-duoshuo_shortname:
+duoshuo_shortname: codemaker
