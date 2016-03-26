@@ -23,8 +23,8 @@ kramdown:
 
 
 # 地址设置
-baseurl: ""
-url: ""
+baseurl: "http://www.codemaker.cn"
+url: "http://www.codemaker.cn"
 
 
 # 分页设置
