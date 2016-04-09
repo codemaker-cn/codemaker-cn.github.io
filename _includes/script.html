@@ -1,7 +1,20 @@
-<!--官方JS引入-->
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="{{ site.baseurl}}/assets/script/pithy.js"></script>
-{% for script in page.scripts %}
-  <script type="text/javascript" src="{{'/assets/script/' | append: script | prepend: site.baseurl }}"></script>
-{% endfor %}
+  <!--官方JS引入-->
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="{{ site.baseurl}}/assets/script/pithy.js"></script>
+  {% for script in page.scripts %}
+    <script type="text/javascript" src="{{'/assets/script/' | append: script | prepend: site.baseurl }}"></script>
+  {% endfor %}
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{site.duoshuo_shortname}}"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->

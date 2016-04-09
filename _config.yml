@@ -1,13 +1,13 @@
 #version
 version: "1.0"
 
-permalink: /:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title.html
 
 # 站点设置
 title: "CodeMaker-码农网"
 email: 286198612@qq.com
 description: "CodeMaker 码农网"
-keywords: "CodeMaker 码农网 代码生成工具 代码分享 Java Bootstrap Jquery HTML5 css3"
+keywords: "CodeMaker 码农网 代码分享 Java Bootstrap Jquery HTML5 css3"
 
 # 用户信息设置
 weibo_username: LiuLiang

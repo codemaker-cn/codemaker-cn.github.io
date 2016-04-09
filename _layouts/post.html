@@ -1,34 +1,34 @@
 ---
 layout: default
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-md-9 col-content">
-        <div id="post-content" class="panel panel-pithy post">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-content">
+          <div id="post-content" class="panel panel-pithy post">
             <div class="panel-heading">
-                <h3 class="title">
-                  <i class="fa fa-bookmark-o"></i>{{page.title}}
-                </h3>
-                <ul class="info">
-                    <li>作者：<span class="author">{{ page.author }}</span></li>
-                    <li>最后编辑：{{ page.date | date: "%Y年%m月%d日" }}</li>
-                    <li>标签：
-                     {% for tag in page.tags %}
-                         <a class="tag" href="{{site.baseurl}}/tag/#{{ tag }}">{{ tag }}</a>
-                     {% endfor %}
-                    </li>
-                </ul>
+              <h3 class="title"> <i class="fa fa-bookmark-o"></i>{{page.title}} </h3>
+              <ul class="info">
+                <li>作者：<span class="author">{{ page.author }}</span></li>
+                <li>最后编辑：{{ page.date | date: "%Y年%m月%d日" }}</li>
+                <li>标签：
+                  {% for tag in page.tags %} <a class="tag" href="{{site.baseurl}}/tag/#{{ tag }}">{{ tag }}</a> {% endfor %} 
+                </li>
+              </ul>
             </div>
-            <div class="panel-body content">
-                {{content}}
+            <div class="panel-body content"> 
+            {{content}} 
             </div>
             {% include share.html%}
+            <div class="panel-footer"> 
+              {% if page.next %}上一篇：<a href="{{ page.next.url }}">{{ page.next.title }}</a> {% else %}上一篇：没有了{% endif %}
+              {% if page.previous %}下一篇：<a href="{{ page.previous.url }}">{{ page.previous.title }}</a> {% else %}下一篇：没有了{% endif %}
+            </div>
+          </div>
+          {% include comment.html%} 
         </div>
-        {% include comment.html%}
+        <div class="col-md-3 col-sidebar"> 
+          {% include categories.html%}
+          {% include tags.html%} 
+        </div>
+      </div>
     </div>
-    <div class="col-md-3 col-sidebar">
-        {% include categories.html%}
-        {% include tags.html%}
-    </div>
-  </div>
-</div>
